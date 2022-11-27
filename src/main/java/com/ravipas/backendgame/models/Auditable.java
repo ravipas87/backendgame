@@ -28,10 +28,4 @@ public abstract class Auditable<T> {
     @CreatedDate
     protected Date creationDate;
 
-
-    @Column(name = "lastMod_date")
-    @LastModifiedDate
-    @Temporal(TIMESTAMP)
-    protected Date lastModifiedDate;
-
 }

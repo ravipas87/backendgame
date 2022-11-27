@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  mysql:
+    container_name: gamedb
+    image: mysql:8.0.3
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: 'gamedb'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+    ports:
+      - '4406:3306'
+    expose:
+      - '3306'
+    volumes:
+      - db-game_data:/var/lib/mysql
+  mysql2:
+    container_name: gamestatsdb
+    image: mysql:8.0.3
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: 'gamestatsdb'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+    ports:
+      - '4407:3306'
+    expose:
+      - '3306'
+    volumes:
+      - db-game_data:/var/lib/mysql
+      
+volumes:
+  db-game_data:

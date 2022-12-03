@@ -2,17 +2,18 @@ package com.ravipas.backendgame.services;
 
 import com.ravipas.backendgame.models.PlayOption;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertTrue;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class IAprocessTest {
-    @Autowired
+    @InjectMocks
     IAprocess iaprocess;
 
     @Test

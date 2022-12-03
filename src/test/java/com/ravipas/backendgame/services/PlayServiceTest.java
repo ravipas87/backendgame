@@ -3,22 +3,20 @@ package com.ravipas.backendgame.services;
 import com.ravipas.backendgame.models.PlayOption;
 import com.ravipas.backendgame.models.PlayResult;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class PlayServiceTest {
-    @Autowired
-    PlayService playService;
 
+    @InjectMocks
+    PlayService playService;
 
     @Test
     public void gameLogicTest() {
